@@ -1,66 +1,78 @@
-📸 Hand Gesture Zoom Control using MediaPipe and OpenCV
+# 📸 Hand Gesture Zoom Control using MediaPipe and OpenCV
 
-This project allows you to control zoom functionality on your computer using hand gestures via webcam. It uses MediaPipe to detect the distance between your thumb and index finger, and simulates zoom in/out based on that distance using pyautogui.
-🚀 Features
+This project allows you to **control zoom functionality on your computer using hand gestures** via webcam. It uses **MediaPipe** to detect the distance between your **thumb and index finger**, and simulates zoom in/out based on that distance using **pyautogui**.
 
-    Real-time hand tracking using MediaPipe
+---
 
-    Calculates distance between thumb and index finger
+## 🚀 Features
 
-    Smooth zoom control using Ctrl + = and Ctrl + - hotkeys
+- Real-time hand tracking using MediaPipe
+- Calculates distance between thumb and index finger
+- Smooth zoom control using `Ctrl + =` and `Ctrl + -` hotkeys
+- Adjustable sensitivity and scaling
+- Works on any system-level zoom-supported app (browser, IDE, etc.)
 
-    Adjustable sensitivity and scaling
+---
 
-    Works on any system-level zoom-supported app (browser, IDE, etc.)
+## 🔧 Installation
 
-🔧 Installation
-✅ Install Required Packages
+### ✅ Install Required Packages
 
 Make sure Python is installed. Then, install the dependencies:
 
+```bash
 pip install opencv-python mediapipe numpy pyautogui
+```
 
-▶️ Usage
+---
 
-    Clone the repository:
+## ▶️ Usage
 
+1. Clone the repository:
+
+```bash
 git clone https://github.com/your-username/hand-gesture-zoom.git
 cd hand-gesture-zoom
+```
 
-    Run the script:
+2. Run the script:
 
+```bash
 python hand_zoom.py
+```
 
-    Show your hand to the webcam and use your thumb and index finger to zoom:
+3. Show your hand to the webcam and use your **thumb and index finger** to zoom:
+   - Move fingers apart ➝ Zoom In
+   - Move fingers closer ➝ Zoom Out
 
-        Move fingers apart ➝ Zoom In
+4. Press `q` to exit the application.
 
-        Move fingers closer ➝ Zoom Out
+---
 
-    Press q to exit the application.
+## 🧠 How It Works
 
-🧠 How It Works
+- The webcam captures the video stream.
+- MediaPipe tracks hand landmarks.
+- Distance between **thumb tip** and **index finger tip** is calculated.
+- Based on the change in distance, `Ctrl + =` or `Ctrl + -` is triggered using `pyautogui`.
 
-    The webcam captures the video stream.
+---
 
-    MediaPipe tracks hand landmarks.
+## 📌 Notes
 
-    Distance between thumb tip and index finger tip is calculated.
+- This app uses screen-level hotkeys, so ensure the target app (like a browser or PDF reader) supports `Ctrl +` zooming.
+- Works best with a clear background and good lighting.
+- Currently supports only **one hand** for gesture control.
 
-    Based on the change in distance, Ctrl + = or Ctrl + - is triggered using pyautogui.
+---
 
-📌 Notes
+## 👨‍💻 Author
 
-    This app uses screen-level hotkeys, so ensure the target app (like a browser or PDF reader) supports Ctrl + zooming.
-
-    Works best with a clear background and good lighting.
-
-    Currently supports only one hand for gesture control.
-
-👨‍💻 Author
-
-Made by Sreyas P 🦇
+Made by **Sreyas P** 🦇  
 Feel free to contribute or raise issues.
-📜 License
+
+---
+
+## 📜 License
 
 MIT License – do whatever you want 🤘
